@@ -20,7 +20,7 @@ function decide() {
         let char = pword[i]
         if (clist.indexOf(char) === -1) {
             if (char !== "ー") {
-                alert('文字"' + char + '"は認識できません')
+                alert('文字"' + char + '"は認識できません\nカタカナで入力してください')
                 return
             }
         }
@@ -57,7 +57,7 @@ function decide() {
         occur.push(cword)
         document.getElementById("label1").innerText = pwe + '：' + cword
         if (cword.slice(-1) === 'ー') {
-            cwe = vdict[cword.slice(-2)]
+            cwe = vdict[cword.slice(-2, -1)]
         } else {
             cwe = cword.slice(-1)
         }
