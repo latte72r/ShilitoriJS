@@ -2,4 +2,4 @@
 これはJavaScript製のしりとりプログラムです。
 
 ## ゲームのプレイ
-ゲームは<em>[GitHub Pages](https://ryofuji2005.github.io/ShilitoriJS/shilitori.html)</em>上でプレイできます。
+ゲームは<em>[GitHub Pages上](https://ryofuji2005.github.io/ShilitoriJS/shilitori.html)</em>でプレイできます。
