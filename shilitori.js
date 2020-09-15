@@ -1,4 +1,5 @@
 
+const clist = Object.keys(rdict)
 cwe = "リ"
 cword = "シリトリ"
 occur = []
