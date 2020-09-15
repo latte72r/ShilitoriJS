@@ -2,22 +2,17 @@
     font-size: 200%
 }
 
-#main input {
-    font-size: 100%
-}
-
 #input1 {
-    width: 200px
+    width: 240px;
+    font-size: 80%
 }
 
 #entry1 {
-    width: 320px
+    width: 320px;
+    font-size: 100%
 }
 
 #div1 {
-    padding-left: 80px
-}
-
-#div2 {
-    padding-left: 120px
+    padding-left: 20px;
+    font-size: 100%
 }
