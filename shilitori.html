@@ -2,10 +2,9 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="./vdict.js"></script>
-    <script type="text/javascript" src="./rdict.js"></script>
-    <!--<script type="text/javascript" src="./clist.js"></script>-->
-    <script type="text/javascript" src="./wdict.js"></script>
+    <script type="text/javascript" src="./vdict.js"></script>  <!-- 母音辞書 (Vowel dict) -->
+    <script type="text/javascript" src="./sdict.js"></script>  <!-- 清音辞書 (Seione dict) -->
+    <script type="text/javascript" src="./wdict.js"></script>  <!-- 単語辞書 (Word dict) -->
     <script type="text/javascript" src="./shilitori.js"></script>
     <link rel="stylesheet" type="text/css" href="./shilitori.css"></link>
     <title>しりとり</title>
@@ -19,13 +18,14 @@
     </div><br>
     <h2>ルール</h2>
     <div id="rule">
+        <li>"Shift キー"でも決定できます</li>
         <li>１文字だけの単語は禁止です</li>
         <li>10文字以上の単語は禁止です</li>
         <li>名詞を入力して決定を押してください</li>
         <li>最後に"ん"がついた時あなたの負けです</li>
         <li>一度使われた単語は使えません</li>
         <li>読みが同じ単語は同一とみなします</li>
-        <li>通常音と濁音・破裂音は区別しません</li>
+        <li>通常音と濁音・半濁音は区別しません</li>
         <li>全角カタカナで入力してください</li>
     </div><br>
     <footer><em>Copyright ©2020 Ryo Fujinami. All rights reserved.</em></footer>
