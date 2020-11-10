@@ -114,17 +114,20 @@ function decide() {
 // 文字列型に変換してラベルを変更
 function setNum() {
     let str_time // 文字列型の数字
+
+    // 文字列型に変換
     if (num_time === 1) {str_time = "１"}
-    else if (num === 2) {str_time = "２"}
-    else if (num === 3) {str_time = "３"}
-    else if (num === 4) {str_time = "４"}
-    else if (num === 5) {str_time = "５"}
-    else if (num === 6) {str_time = "６"}
-    else if (num === 7) {str_time = "７"}
-    else if (num === 8) {str_time = "８"}
-    else if (num === 9) {str_time = "９"}
+    else if (num_time === 2) {str_time = "２"}
+    else if (num_time === 3) {str_time = "３"}
+    else if (num_time === 4) {str_time = "４"}
+    else if (num_time === 5) {str_time = "５"}
+    else if (num_time === 6) {str_time = "６"}
+    else if (num_time === 7) {str_time = "７"}
+    else if (num_time === 8) {str_time = "８"}
+    else if (num_time === 9) {str_time = "９"}
     else {str_time = String(num_time)}
-    document.getElementById("label3").innerText = str_time + "回目"
+
+    document.getElementById("label3").innerText = str_time + "回目" // ラベルを変更
 }
 
 // データを初期化
