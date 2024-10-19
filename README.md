@@ -1,7 +1,6 @@
 # <em>Shilitori (JavaScript version)</em>  
-## 概要  
-これはJavaScriptのしりとりプログラムです。  
-単語セットは機械的に選んでいます。  
-注意して確認していますが、一部の人にとって不快に感じる単語や名詞でない単語が含まれる場合があります。  
-## ゲームのプレイ
-ゲームは<em>[GitHub Pages](https://latte72r.github.io/ShilitoriJS/shilitori.html)</em>でプレイできます。
+## プログラムの概要  
+このプログラムは、JavaScriptを使用して動作する「しりとり」ゲームです。  
+シンプルで直感的なインターフェースを採用していて、誰でも簡単に楽しむことができます。  
+## ゲームのプレイ方法
+このゲームは次のリンクからプレイできます：<em>[ゲームを始める](https://latte72r.github.io/ShilitoriJS/shilitori.html)</em>  
