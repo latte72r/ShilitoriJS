@@ -1,33 +1,58 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="./vdict.js"></script>  <!-- 母音辞書 (Vowel dict) -->
-    <script type="text/javascript" src="./sdict.js"></script>  <!-- 清音辞書 (Seione dict) -->
-    <script type="text/javascript" src="./wdict.js"></script>  <!-- 単語辞書 (Word dict) -->
+    <meta property="og:image" content="./win_icon.gif">
+    <script type="text/javascript" src="./vdict.js"></script> <!-- 母音辞書 (Vowel dict) -->
+    <script type="text/javascript" src="./sdict.js"></script> <!-- 清音辞書 (Seione dict) -->
+    <script type="text/javascript" src="./wdict.js"></script> <!-- 単語辞書 (Word dict) -->
     <script type="text/javascript" src="./shilitori.js"></script>
-    <link rel="stylesheet" type="text/css" href="./shilitori.css"></link>
+    <link rel="stylesheet" type="text/css" href="./shilitori.css">
+    <link rel="icon" type="image/gif" href="./win_icon.gif">
+    <script src="./jquery-3.7.1.min.js"></script>
     <title>しりとり</title>
 </head>
+
 <body>
-    <header><h1><em>Shilitori (JavaScript version)</em></h1></header>
-    <div id="main">
-        <div class="align_left" id="label1">始：シリトリ</div>
-        <div class="align_left"><span id="label2">リ：</span><input type="text" id="entry1"></div>
-        <div id="div1"><input id="input1" type="button" onclick="decide()" value="決定"><span id="label3">１回目</span></div>
-    </div><br>
-    <h2>ルール</h2>
-    <div id="rule">
-        <li>"Shift キー"でも決定できます</li>
-        <li>１文字だけの単語は禁止です</li>
-        <li>10文字以上の単語は禁止です</li>
-        <li>名詞を入力して決定を押してください</li>
-        <li>最後に"ん"がついた時あなたの負けです</li>
-        <li>一度使われた単語は使えません</li>
-        <li>読みが同じ単語は同一とみなします</li>
-        <li>通常音と濁音・半濁音は区別しません</li>
-        <li>全角カタカナで入力してください</li>
-    </div><br>
-    <footer><em>Copyright ©2020 Ryo Fujinami. All rights reserved.</em></footer>
+    <div id="container">
+        <header>
+            <h1>Shilitori (JavaScript version)</h1>
+        </header>
+        <div id="main">
+            <div class="align_left"><span class="label">始：シリトリ</span></div>
+            <div class="align_left"><span class="label">リ：</span><input type="text" id="entry1"></div>
+            <div id="div1">
+                <input id="input1" type="button" onclick="decide()" value="決定">
+                <span id="label3">１回目</span>
+            </div>
+        </div>
+        <div id="rule">
+            <h2>ルール</h2>
+            <ul>
+                <li>"Shift キー"でも決定できます</li>
+                <li>１文字だけの単語は禁止です</li>
+                <li>10文字以上の単語は禁止です</li>
+                <li>名詞を入力して決定を押してください</li>
+                <li>最後に"ん"がついた時あなたの負けです</li>
+                <li>一度使われた単語は使えません</li>
+                <li>読みが同じ単語は同一とみなします</li>
+                <li>通常音と濁音・半濁音は区別しません</li>
+                <li>全角カタカナで入力してください</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer id="copyright">
+        <p>© 2020-2024 Latte72. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // ページロード時にフェードイン
+        $(document).ready(function () {
+            $('#container').hide().fadeIn(1000);
+        });
+    </script>
 </body>
+
 </html>

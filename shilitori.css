@@ -1,23 +1,141 @@
+/* ベーススタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    color: #333;
+}
+
+header h1 {
+    font-style: italic;
+    font-size: 2.5em;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+#container {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 2em;
+    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+}
+
+#copyright p {
+    font-size: 1em;
+    font-style: italic;
+    text-align: center;
+    margin: 1em;
+    color: #777;
+}
+
 #main {
-    font-size: 200%
+    font-size: 1.5em;
+    width: 50%;
+}
+
+#main div {
+    padding-bottom: 0.4em;
 }
 
 #rule {
-    font-size: 120%;
-    color: red;
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 1em;
+    padding: 0em 2em;
+    border: 0.2em solid #2980b9;
+    border-radius: 0.8em;
+    background-color: #f0f8ff;
+    width: 80%;
+}
+
+#rule h2 {
+    font-size: 1.5em;
+    margin-bottom: 0em;
+    color: #2980b9;
+}
+
+/* ルールリストの枠スタイル */
+#rule ul {
+    list-style: none;
+    color: #2980b9;
+    margin-top: 0.2em;
+}
+
+#rule li:before {
+    content: "※ ";
+    color: #2980b9;
 }
 
 #input1 {
-    width: 240px;
-    font-size: 80%
+    font-size: 1em;
+    padding: 0.2em 1.6em;
+    margin: 0em 0em;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+}
+
+#input1:hover {
+    background-color: #3498db;
+    transform: translateY(-0.05em);
 }
 
 #entry1 {
-    width: 320px;
-    font-size: 100%
+    width: 12em;
+    font-size: 1em;
+    padding: 0.4em;
+    border: 0.05em solid #ccc;
+    border-radius: 0.2em;
 }
 
 #div1 {
-    padding-left: 20px;
-    font-size: 100%
+    font-size: 1em;
+    text-align: center;
+}
+
+#label3 {
+    text-align: left;
+    padding-left: 0.5em;
+}
+
+/* スマートフォン */
+@media (max-width: 1023px) {
+    html {
+        width: 100%;
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    body {
+        padding: 2em;
+    }
+
+    #container {
+        max-width: 90%;
+    }
+}
+
+/* PC */
+@media (min-width: 1024px) {
+    html {
+        width: 100%;
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    body {
+        padding: 2em;
+    }
+
+    #container {
+        max-width: 60%;
+    }
 }

@@ -80,8 +80,9 @@ function decide() {
     used_words.push(pword) // 単語を使用したリストに追加
 
     // もし機械側の単語選択リストにプレイヤーの単語があれば削除
-    if (wdict[cwend].indexOf(pword)) {
-        delete wdict[cwend][pword]
+    index = wdict[cwend].indexOf(pword)
+    if (index != 0) {
+        wdict[cwend].splice(index, 1);
     }
 
     // 勝ち判定
@@ -91,11 +92,22 @@ function decide() {
         return
     }
 
-    cword = wdict[pwend][Math.floor(Math.random() * wdict[pwend].length)] // 単語を選ぶ
-    delete wdict[pwend][cword] // 選ばれた単語をリストから削除
-    used_words.push(cword) // 単語を使用されたリストに追加
+    // 単語を選ぶ
+    cword = wdict[pwend][Math.floor(Math.random() * wdict[pwend].length)]
 
-    document.getElementById("label1").innerText = pwend + '：' + cword // ラベルの文字列を変更
+    // 選ばれた単語をリストから削除
+    index = wdict[pwend].indexOf(cword)
+    wdict[pwend].splice(index, 1);
+
+    copy = wdict[pwend];
+    copy.splice(cword, 1);
+    wdict[pwend] = copy;
+
+    // 単語を使用されたリストに追加
+    used_words.push(cword)
+
+    // ラベルの文字列を変更
+    document.getElementById("label1").innerText = pwend + '：' + cword
 
     // 最後の文字が長音符なら一文字前の母音を利用
     if (cword.slice(-1) === 'ー') {
@@ -116,16 +128,16 @@ function setNum() {
     let str_time // 文字列型の数字
 
     // 文字列型に変換
-    if (num_time === 1) {str_time = "１"}
-    else if (num_time === 2) {str_time = "２"}
-    else if (num_time === 3) {str_time = "３"}
-    else if (num_time === 4) {str_time = "４"}
-    else if (num_time === 5) {str_time = "５"}
-    else if (num_time === 6) {str_time = "６"}
-    else if (num_time === 7) {str_time = "７"}
-    else if (num_time === 8) {str_time = "８"}
-    else if (num_time === 9) {str_time = "９"}
-    else {str_time = String(num_time)}
+    if (num_time === 1) { str_time = "１" }
+    else if (num_time === 2) { str_time = "２" }
+    else if (num_time === 3) { str_time = "３" }
+    else if (num_time === 4) { str_time = "４" }
+    else if (num_time === 5) { str_time = "５" }
+    else if (num_time === 6) { str_time = "６" }
+    else if (num_time === 7) { str_time = "７" }
+    else if (num_time === 8) { str_time = "８" }
+    else if (num_time === 9) { str_time = "９" }
+    else { str_time = String(num_time) }
 
     document.getElementById("label3").innerText = str_time + "回目" // ラベルを変更
 }
