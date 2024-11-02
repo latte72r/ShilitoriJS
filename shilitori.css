@@ -101,6 +101,7 @@ header h1 a {
 }
 
 #entry1 {
+    font-family: "Noto Sans JP", sans-serif;
     width: 12em;
     font-size: 1em;
     padding: 0.4em;
