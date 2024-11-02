@@ -1,6 +1,13 @@
+@font-face {
+    /*フォントの名前*/
+    font-family: "Noto Sans JP";
+    /*フォントファイルへのパス（複数指定の場合、上から順に読み込まれる）*/
+    src: url("./fonts/NotoSansJP-Regular.woff2") format("woff2");
+}
+
 /* ベーススタイル */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     background-color: #f5f5f5;
     margin: 0;
     color: #333;
