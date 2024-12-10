@@ -29,15 +29,9 @@ function decide() {
     let pword = (document.getElementById("entry1") as HTMLInputElement).value; // プレイヤー側の単語 (Player's word)
     let lenpw = pword.length; // プレイヤー側の単語の文字数 (Length of player's word)
 
-    // 文字数が０文字、１文字、10文字以上の時は警告を出して終了
-    if (lenpw === 0) {
+    // 文字数が0文字、1文字、10文字以上の時は警告を出して終了
+    if (lenpw <= 0) {
         alert('入力してください');
-        return;
-    } else if (lenpw === 1) {
-        alert('１文字の単語は禁止です');
-        return;
-    } else if (lenpw > 10) {
-        alert('10文字より多い単語は禁止です');
         return;
     }
 
@@ -122,26 +116,12 @@ function decide() {
     (document.getElementById("label2") as HTMLSpanElement).innerText = cwend + '：'; // ラベルの文字列を変更
     (document.getElementById("entry1") as HTMLInputElement).value = ""; // ラベルの文字列を変更
     num_time += 1; // 回数を進める
-    setNum(); // 文字列型に変換してラベルを変更
+    setNum(); // 回数の表示を更新
 }
 
-// 文字列型に変換してラベルを変更
+// 回数の表示を更新
 function setNum() {
-    let str_time; // 文字列型の数字
-
-    // 文字列型に変換
-    if (num_time === 1) { str_time = "１" }
-    else if (num_time === 2) { str_time = "２" }
-    else if (num_time === 3) { str_time = "３" }
-    else if (num_time === 4) { str_time = "４" }
-    else if (num_time === 5) { str_time = "５" }
-    else if (num_time === 6) { str_time = "６" }
-    else if (num_time === 7) { str_time = "７" }
-    else if (num_time === 8) { str_time = "８" }
-    else if (num_time === 9) { str_time = "９" }
-    else { str_time = String(num_time) }
-
-    (document.getElementById("label3") as HTMLSpanElement).innerText = str_time + "回目"; // ラベルを変更
+    (document.getElementById("label3") as HTMLSpanElement).innerText = String(num_time) + " 回目"; // ラベルを変更
 }
 
 // データを初期化
@@ -153,5 +133,5 @@ function refresh() {
     (document.getElementById("label1") as HTMLSpanElement).innerText = "始：シリトリ"; // ラベルの文字列を初期化
     (document.getElementById("label2") as HTMLSpanElement).innerText = "リ："; // ラベルの文字列を初期化
     (document.getElementById("entry1") as HTMLInputElement).value = ""; // ラベルの文字列を初期化
-    setNum() // 文字列型に変換してラベルを初期化
+    setNum() // 回数の表示を更新
 }
